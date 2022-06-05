@@ -13,12 +13,14 @@ export default function SearchPokemon() {
         
         <SearchPokemonPure />
 
+        <div className={style.pokemons}>
         <div className={style.container}>
-        {pokemnons ? pokemnons.map(({id, name, height, weight, types, url}) => 
-            (
-                <Pokemon key={id} id={id} name={name} height= {height} weight={weight} types={types} url={url} />
-            )
-        ): <div></div>}
+            {pokemnons ? pokemnons.map(({id, name, height, weight, types, url}) => 
+                (
+                    <Pokemon key={id} id={id} name={name} height= {height} weight={weight} types={types} url={url} />
+                )
+            ): <div></div>}
+            </div>
         </div>
     </div>
   )

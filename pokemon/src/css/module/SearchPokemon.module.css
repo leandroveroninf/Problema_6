@@ -1,6 +1,27 @@
+
+.pokemons{
+    height: 40em;
+    background: linear-gradient(309deg, rgb(32 3 3) 0%, rgb(112 0 0) 35%, #ff5722 100%);
+    overflow-x: overlay;
+    overscroll-behavior: contain;
+    padding: 2em;
+}
+
+.pokemons::-webkit-scrollbar {
+    width: 10px;
+}
+
+.pokemons::-webkit-scrollbar-thumb {
+    background-color: #000000;
+}
+
+.pokemons::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 15px;
+}
+
 .container{
     display: flex;
-    background-color: #6c6c6c;
     flex-direction: row;
     align-items: stretch;
     flex-wrap: wrap;
