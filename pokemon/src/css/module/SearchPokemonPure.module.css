@@ -1,0 +1,28 @@
+.containerSearch > input {
+    margin: 7px;
+    padding: 7px;
+    font-size: 17px;
+    border-radius: 5px;
+    box-shadow: -1px 2px 3px 0px #2a2727;
+    border: 0;
+    outline: none;
+  }
+  
+  .containerSearch > button {
+    border: 0;
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+  }
+  
+  .containerSearch > button:hover {
+    background-color: #26242478;
+    color: white;
+  }
+
+  .containerSearch{
+    text-align: center;
+    margin-top: 1em;
+  }
+
+  

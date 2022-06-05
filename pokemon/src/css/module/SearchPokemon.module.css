@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    background-color: #6c6c6c;
+    flex-direction: row;
+    align-items: stretch;
+    flex-wrap: wrap;
+    padding: 1em;
+    grid-gap: 1em;
+    justify-content: space-evenly;
+}
+
