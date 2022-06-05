@@ -6,6 +6,21 @@
     padding: 1em;
 }
 
+.divHeader{
+    display: grid;
+    grid-template-columns: 25px 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.btnEliminar{
+    font-size: 14px;
+    box-shadow: -1px 1px 4px 0px #ff0000;
+    border-radius: 20%;
+    color: #ff0404;
+    background-color: #000000;
+}
+
 .descPokType{
     display: flex;
     flex-direction: row;

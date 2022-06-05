@@ -1,5 +1,5 @@
 import {createSlice} from "@reduxjs/toolkit";
-import axios from "axios"
+
 //Nombre, número, tipo, peso, altura y una imágen
 
 export const pokemonSlice = createSlice({
@@ -10,27 +10,15 @@ export const pokemonSlice = createSlice({
     reducers:{
         searchPokemon(state, action){
             state.pokemnons.push(action.payload);
+        },
+        deletPokemon(state, action){
+            const filterPofemon = state.pokemnons.filter(({id}) => id !== action.payload);
+            state.pokemnons = filterPofemon;
         }
     }
 });
 
 
-export const { searchPokemon } = pokemonSlice.actions
-
-
-export const searchPokemonAPI = (namePokemon) =>  async (dispach)=>{
-    const { data: {name, id, height, types, weight, sprites: {other: {home : {front_default: url}}}} } = await axios(`https://pokeapi.co/api/v2/pokemon/${namePokemon}`);
-    
-    dispach(searchPokemon({
-        id,
-        name,
-        height,
-        weight,
-        types,
-        url
-    }));
-}
-
-
+export const { searchPokemon, deletPokemon } = pokemonSlice.actions
 
 export default pokemonSlice.reducer

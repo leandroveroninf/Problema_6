@@ -16,7 +16,7 @@ export default function SearchPokemon() {
         <div className={style.container}>
         {pokemnons ? pokemnons.map(({id, name, height, weight, types, url}) => 
             (
-                <Pokemon key={id} name={name} height= {height} weight={weight} types={types} url={url} />
+                <Pokemon key={id} id={id} name={name} height= {height} weight={weight} types={types} url={url} />
             )
         ): <div></div>}
         </div>

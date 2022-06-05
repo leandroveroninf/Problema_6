@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from "react-redux";
-import { searchPokemonAPI } from '../../redux/pokemon/pokemonSlice';
 import style from "../../css/module/SearchPokemonPure.module.css"
+import { searchPokemonAPI } from '../../redux/pokemon/actions';
 
 export default function SearchPokemonPure() {
   
@@ -9,7 +9,7 @@ export default function SearchPokemonPure() {
   const dispatch = useDispatch();
 
   const handelOnChange = (e) => {
-    setName(e.target.value.toLoweCase());
+    setName(e.target.value);
   };
 
   const handelOnClick = () => {
